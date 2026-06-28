@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electron Builder Pro ⚛️</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚛️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════ TOP NAVBAR ═══════ -->
+<header class="top-bar">
+  <div class="brand">
+    <span class="brand-icon">⚛️</span>
+    <span class="brand-name">Electron Builder Pro</span>
+  </div>
+  <nav class="desktop-nav">
+    <button class="nav-btn" data-page="home">🏠 หน้าแรก</button>
+    <button class="nav-btn" data-page="lesson">📖 บทเรียน</button>
+    <button class="nav-btn" data-page="table">🔬 ตารางธาตุ</button>
+    <button class="nav-btn" data-page="map">🗺️ แผนผัง</button>
+    <button class="nav-btn" data-page="sim">⚗️ Simulator</button>
+    <button class="nav-btn" data-page="practice">✏️ ฝึก</button>
+    <button class="nav-btn" data-page="quiz">📝 ทดสอบ</button>
+    <button class="nav-btn" data-page="compare">⚖️ เปรียบ</button>
+    <button class="nav-btn" data-page="result">📊 ผล</button>
+  </nav>
+  <div class="top-actions">
+    <button id="theme-toggle" class="icon-btn" title="สลับธีม">🌙</button>
+    <button class="icon-btn mobile-menu-btn" onclick="toggleMobileMenu()" title="เมนู">☰</button>
+  </div>
+</header>
+
+<!-- ═══════ MOBILE MENU ═══════ -->
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
+  <button class="nav-btn" data-page="home"     onclick="toggleMobileMenu()">🏠 หน้าแรก</button>
+  <button class="nav-btn" data-page="lesson"   onclick="toggleMobileMenu()">📖 บทเรียน</button>
+  <button class="nav-btn" data-page="table"    onclick="toggleMobileMenu()">🔬 ตารางธาตุ</button>
+  <button class="nav-btn" data-page="map"      onclick="toggleMobileMenu()">🗺️ Shell↔Subshell↔Orbital</button>
+  <button class="nav-btn" data-page="sim"      onclick="toggleMobileMenu()">⚗️ Simulator</button>
+  <button class="nav-btn" data-page="practice" onclick="toggleMobileMenu()">✏️ ฝึกทำโจทย์</button>
+  <button class="nav-btn" data-page="quiz"     onclick="toggleMobileMenu()">📝 แบบทดสอบ</button>
+  <button class="nav-btn" data-page="compare"  onclick="toggleMobileMenu()">⚖️ เปรียบเทียบธาตุ</button>
+  <button class="nav-btn" data-page="result"   onclick="toggleMobileMenu()">📊 ผลการเรียน</button>
+</div>
+<div class="mobile-overlay" id="mobile-overlay" onclick="toggleMobileMenu()"></div>
+
+<!-- ═══════ MAIN CONTENT ═══════ -->
+<main class="main-wrap">
+  <div id="main-content" class="main-content">
+    <!-- Rendered by script.js -->
+  </div>
+</main>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="app-footer">
+  <p>⚛️ Electron Builder Pro &nbsp;|&nbsp; พัฒนาโดย ครูสุพักตร์ศิริ พืชสิงห์ &nbsp;|&nbsp; โรงเรียนโพธิ์ศรีสว่างวิทยา &nbsp;|&nbsp; ม.4 วิชาเคมี</p>
+</footer>
+
+<!-- ═══════ SCRIPTS ═══════ -->
+<script src="elements.js"></script>
+<script src="quizData.js"></script>
+<script src="script.js"></script>
+<script>
+  function toggleMobileMenu() {
+    const nav = document.getElementById('mobile-nav');
+    const overlay = document.getElementById('mobile-overlay');
+    nav.classList.toggle('open');
+    overlay.classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>
